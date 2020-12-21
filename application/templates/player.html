@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% block body %}
+<br><br>
+
+{% if isLimitReach == True %}
+<br>
+Can only have 5 players in team!
+<br>
+{% endif %}
+<br>
+<br>
+<div class = 'form'>
+<form action='' method='POST'>
+    {{ form.hidden_tag() }}
+    {{ form.name.label }} {{ form.name }}  <br>
+    {{ form.position.label }} {{ form.position }} <br>
+    {{ form.submit }}
+</form>
+</div>
+
+<h2>List of all Players</h2>
+{% for player in all_players %}
+        <br>
+        {{ player.name }} <br>
+        {{ player.position }} 
+        <br>
+        
+{% endfor %}
+
+
+
+{% endblock body %}

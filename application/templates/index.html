@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<h2>List of all Teams</h2>
+{% for team in all_teams %}
+        <br>
+        Team Name: {{ team.team_name }} <br> 
+        Team Sponsor: {{ team.sponsor }}
+        <br>
+        <form action="{{ url_for('update', id=team.id) }}">
+            <input type=submit value="Update">
+        </form>
+        <form action="{{ url_for('delete', id=team.id) }}">
+            <input type=submit value="Delete">
+        </form>
+        <form action="{{ url_for('add', id=team.id) }}">
+            <input type=submit value="Players">
+        <br>
+        <br>
+    
+{% endfor %}
+
+
+
+{% endblock body %}

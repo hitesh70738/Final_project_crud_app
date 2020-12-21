@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block body %}
+<br><br>
+Current Name: {{ teams.team_name }}
+<br><br>
+Current Sponsor: {{ teams.sponsor }}
+<div class = 'form'>
+<form action='' method='POST'>
+    {{ form.hidden_tag() }}
+    {{ form.team_name.label }} {{ form.team_name }} <br>
+    {{ form.sponsor.label }} {{ form.sponsor }} 
+    {{ form.submit }}
+</form>
+</div>
+
+{% endblock body %}
