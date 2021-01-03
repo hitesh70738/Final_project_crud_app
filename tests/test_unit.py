@@ -55,6 +55,7 @@ class TestCreate(TestBase):
             follow_redirects=True
         )
         self.assertIn(b"New team", response.data)
+        self.assertIn(b"Emirates", response.data)
 
 class TestUpdate(TestBase):
     def test_update_task(self):
@@ -63,6 +64,7 @@ class TestUpdate(TestBase):
             follow_redirects=True
         )
         self.assertIn(b"Updated name", response.data)
+        self.assertIn(b"updated sponsor", response.data)
 
 class TestAdd(TestBase):
     def test_add_task(self):
@@ -71,6 +73,9 @@ class TestAdd(TestBase):
             follow_redirects=True
         )
         self.assertIn(b"add name", response.data)
+        self.assertIn(b"CM", response.data)
+        self.assertIn(b"club", response.data)
+        self.assertIn(b"1.77", response.data)
 
 class TestDelete(TestBase):
     def test_update_task(self):

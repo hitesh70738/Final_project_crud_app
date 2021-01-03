@@ -69,6 +69,16 @@ class TestAddPlayer(TestCreateTeam):
         assert Players.query.filter_by(id=1).first().position == 'Arsenal FC'
         assert Players.query.filter_by(id=1).first().position == '1.8'
 
+class TestDeleteTeam(TestCreateTeam):
+
+    def create_team(self):
+        self.driver.find_element_by_xpath("/html/body/form[2]/input").click()
+        time.sleep(1)
+        
+        assert url_for('delete') in self.driver.current_url
+
+
+
 
 if __name__ == '__main__':
     unittesting.main(port=5000)
