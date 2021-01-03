@@ -58,12 +58,16 @@ class TestAddPlayer(TestCreateTeam):
 
         self.driver.find_element_by_xpath('//*[@id="name"]').send_keys('Thomas Partey')
         self.driver.find_element_by_xpath('//*[@id="position"]').send_keys('CDM')
+        self.driver.find_element_by_xpath('//*[@id="club"]').send_keys('Arsenal FC')
+        self.driver.find_element_by_xpath('//*[@id="height"]').send_keys('1.8')
         self.driver.find_element_by_xpath('//*[@id="submit"]').click()
         time.sleep(1)
 
         assert url_for('add') in self.driver.current_url
         assert Players.query.filter_by(id=1).first().name == 'Thomas Partey'
         assert Players.query.filter_by(id=1).first().position == 'CDM'
+        assert Players.query.filter_by(id=1).first().position == 'Arsenal FC'
+        assert Players.query.filter_by(id=1).first().position == '1.8'
 
 
 if __name__ == '__main__':
