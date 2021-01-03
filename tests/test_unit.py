@@ -67,7 +67,7 @@ class TestUpdate(TestBase):
 class TestAdd(TestBase):
     def test_add_task(self):
         response = self.client.post(url_for("add", id=1),
-            data=dict(name="add name", position='CM'),
+            data=dict(name="add name", position='CM', club='club', height='1.77'),
             follow_redirects=True
         )
         self.assertIn(b"add name", response.data)

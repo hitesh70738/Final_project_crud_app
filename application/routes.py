@@ -26,7 +26,7 @@ def add(id):
     all_players = Players.query.filter_by(team_id=id).all()
     isLimitReach = len(all_players) >= 5
     if request.method == "POST" and len(all_players) < 5:
-        new_player = Players(name=form.name.data, position=form.position.data, team_id=id)
+        new_player = Players(name=form.name.data, position=form.position.data, team_id=id, club=form.club.data, height=form.height.data if form.height.data else None)
         db.session.add(new_player)
         db.session.commit()
         return redirect(url_for("add", id=id))

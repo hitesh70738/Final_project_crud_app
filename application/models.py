@@ -12,6 +12,8 @@ class Players(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), nullable=False)
     position = db.Column(db.String(3), nullable=False)
+    club = db.Column(db.String(50), nullable=False)
+    height = db.Column(db.Float, nullable=True)
     team_id = db.Column(db.Integer, db.ForeignKey('teams.id'), nullable=False)
 
 

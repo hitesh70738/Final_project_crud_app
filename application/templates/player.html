@@ -14,6 +14,13 @@ Can only have 5 players in team!
     {{ form.hidden_tag() }}
     {{ form.name.label }} {{ form.name }}  <br>
     {{ form.position.label }} {{ form.position }} <br>
+    {{ form.club.label }} {{ form.club }} <br>
+    {{ form.height.label }} {{ form.height }} <br>
+    <p>
+        <small>
+            ** If club and height is not known leave blank **
+        </small>
+    </p>
     {{ form.submit }}
 </form>
 </div>
@@ -22,7 +29,18 @@ Can only have 5 players in team!
 {% for player in all_players %}
         <br>
         {{ player.name }} <br>
-        {{ player.position }} 
+        {{ player.position }}<br>
+        {% if player.height != None %}
+        {{ player.club }} 
+        {% else %}
+        N/A   
+        {% endif %}
+        <br>
+        {% if player.height != None %}
+        {{ player.height }} 
+        {% else %}
+        N/A   
+        {% endif %}
         <br>
         
 {% endfor %}

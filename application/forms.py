@@ -5,6 +5,8 @@ from wtforms.validators import DataRequired
 class PlayersForm(FlaskForm):
     name = StringField('Name of Player', validators=[DataRequired()])
     position = StringField('Position', validators=[DataRequired()])
+    club = StringField('Club')
+    height = StringField('Height')
     submit = SubmitField('Add player')
 
 class TeamForm(FlaskForm):
