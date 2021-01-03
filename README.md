@@ -7,7 +7,7 @@ CRUD application project:<br>
 -jenkins<br>
 -finish trello board<br> 
 
-# Football Fantasy Team 
+# Fantasy Football
 
 # Project Brief 
 The breif set for this project is to be able to create a CRUD application, with the tools, methodologies and technologies that cover all core modules covered during training.
@@ -39,9 +39,7 @@ In order to achieve the requirements, I decided to create a fantasy football app
 
 ## Database Structure 
 
-Below are two different ER diagrams showing the before and after database structure. 
-
-I created an entity-relationship diagram (ERD) that shows the structure of the database. Two different ERD were made to show the progression of the application.
+Below are two different ER diagrams showing the before and after database structures. 
 
 ### 1st ER-Diagram  
 
@@ -53,7 +51,7 @@ This was the first ER Diagram I made, it shows that one and only one user can ad
 
 ![ERD-2](https://imgur.com/yijwL3Z.jpeg)<br>
 
-The 2nd ER diagram shows the final draft of my ER diagram. I removed the user login page as it was not needed. The application models a one-to-many relationship between the Players and Teams entities. One player can be part of one or many teams created by the user. This will allow the user to create a team with one or many players in that team.
+The 2nd ER diagram shows the final draft of my ER diagram. I removed the user login page as it was not needed. The application models a one-to-many relationship between the Players and Teams entities. One team can have one or many players. This will allow the user to create a team with one or many players in that team.
 
 
 
