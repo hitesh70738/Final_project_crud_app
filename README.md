@@ -83,6 +83,22 @@ development environtment (running on CI surver) from jenkins to google cloud
 
 # Front End Design 
 
+The URL redirects the home page:
+
+![Home-Page](https://imgur.com/W4XYwbG.jpeg)
+
+To create a Team:
+
+![Create-Team-Page](https://imgur.com/j30RRqE.jpeg)
+
+View Homepage:
+
+![Homepage](https://imgur.com/ci20SVR.jpeg)
+
+
+
+
+
 
 
 
