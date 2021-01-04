@@ -12,8 +12,8 @@ from application.models import Teams, Players
 class TestBase(LiveServerTestCase):
 
     def create_app(self):
-        app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:1234@34.105.208.208/crud_app"
-        app.config['SECRET_KEY'] = "asdasda"
+        app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///data.db"
+        app.config['SECRET_KEY'] = "asd"
         return app
 
     def setUp(self):
