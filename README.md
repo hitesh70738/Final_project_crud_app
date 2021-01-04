@@ -74,7 +74,7 @@ Trello, along with agile methodologies, was used to track the progression of the
 <br>
 
 # Risk Assessment
-The risk assessment conducted is split into two sections. The before is showing the risks that were known at the start of project, and the after shows the potentials risks when the project came to its end. 
+Below is the risk assessment split into two sections, before and after. The before section outlines the potential risks at the start of the project. The after sections outlines the potentials risks at the end of the project. 
 
 ### Before
 ![Risk-assessment-1](https://imgur.com/JvamcBA.jpeg)
@@ -86,32 +86,40 @@ The risk assessment conducted is split into two sections. The before is showing 
 
 # Testing
 
+I used pytest to run unit tests on the app. These tests validate that each unit of the application performs as designed. Unit testing on my application came to 100% coverage, this is show below from the jenkins console output. If any tests do fail it will be shown here.
+pytest has the ability to also produce a coverage report, by running:
+```python
+python3 -m pytest --cov=application --cov-report term-missing
+```
+The jenkins output below shows the coverage report produced. Furthermore, running the command above, also shows which parts of the application did not test. 
 
 ![pytest-jenkins](https://imgur.com/wJRxyIG.jpeg)
 
-# Front End Design 
+# Front-End Design 
 
-The URL redirects the home page:
+The front-end design of the application is built using basic HTML. However, it is in a stable state that meets the MVP requirements. 
+
+When the user launches app, the URL redirects them to  the home page:
 
 ![Home-Page](https://imgur.com/W4XYwbG.jpeg)
 
-To create a Team:
+Navigating to the "create team" page allows the user to input a name and a spnosr for their choice for their team:
 
 ![Create-Team-Page](https://imgur.com/j30RRqE.jpeg)
 
-View Homepage:
+Once the user has choosen their team name and sponsor they will be redirected to the homepage:
 
 ![Homepage](https://imgur.com/ci20SVR.jpeg)
 
-Add players:
+An option of adding players is avaliable to the user where they add players to their team. After adding five players to the team the message at the top appears, stating can only have five players in a team. Another message is there which informs the user that if the club and height is not known then leave it blank:
 
 ![Add-players](https://imgur.com/47R5Xtp.jpeg)
 
-Return back to home page:
+After adding players to the team the user can return back to home page:
 
 ![Homepage](https://imgur.com/ci20SVR.jpeg)
 
-Deleting the team:
+Deleting the team returns you back to home page:
 
 ![Home-Page](https://imgur.com/W4XYwbG.jpeg)
 

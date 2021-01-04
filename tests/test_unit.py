@@ -6,7 +6,7 @@ from application.models import Teams, Players
 
 class TestBase(TestCase):
     def create_app(self):
-        app.config.update(SQLALCHEMY_DATABASE_URI="mysql+pymysql://root:1234@34.105.208.208/crud_app",
+        app.config.update(SQLALCHEMY_DATABASE_URI="sqlite:///data.db",
             SECRET_KEY='TEST_SECRET_KEY',
             DEBUG=True
         )
