@@ -49,9 +49,13 @@ This was the first ER Diagram I made, it shows that one and only one user can ad
 
 ### 2nd ER-Diagram 
 
-![ERD-2](https://imgur.com/yijwL3Z.jpeg)<br>
+![ERD-2](https://imgur.com/eTk7zF6.jpeg)<br>
 
 The 2nd ER diagram shows the final draft of my ER diagram. I removed the user login page as it was not needed. The application models a one-to-many relationship between the Players and Teams entities. One team can have one or many players. This will allow the user to create a team with one or many players in that team.
+
+
+
+![Risk-assessment-2](https://imgur.com/fisOPXL.jpeg)
 
 
 
