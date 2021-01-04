@@ -1,13 +1,16 @@
-CRUD application project:<br>
-
--Clean up trello board<br>
--Update ERD<br>
--Risk assessment<br>
--testing<br>
--jenkins<br>
--finish trello board<br> 
-
 # Fantasy Football
+
+* [Project Brief](#Porject-Brief)
+    * [My Approach to the application](#My-approach-to-the-application)
+* [Architecture](#architecture)
+   * [Database Structure](#database-structure)
+   * [CI Pipeline](#ci-pipeline)
+* [Project Tracking](#project-tracking)
+* [Risk Assessment](#risk-assessment)
+* [Testing](#testing)
+* [Front-End Design](#front-end-design)
+* [Future Improvements](#future-improvements)
+* [Authors](#authors)
 
 # Project Brief 
 The breif set for this project is to be able to create a CRUD application, with the tools, methodologies and technologies that cover all core modules covered during training.
@@ -124,6 +127,16 @@ Deleting the team returns you back to home page:
 ![Home-Page](https://imgur.com/W4XYwbG.jpeg)
 
 # Further Improvements
+
+There are a few number of improvements that i would like to implement:
+
+* Use CSS to make the application look more asthetically pleasing.
+* Add images of the players that are being added to the team.  
+* Try an implemeent a delete function for removing players. 
+* Make the application so that it prevents the user from selecting 2 players from the same club. 
+
+# Authors 
+Hitesh Patel
 
 
 
