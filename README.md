@@ -54,20 +54,27 @@ This was the first ER Diagram I made, it shows that one and only one user can ad
 The 2nd ER diagram shows the final draft of my ER diagram. I removed the user login page as it was not needed. The application models a one-to-many relationship between the Players and Teams entities. One team can have one or many players. This will allow the user to create a team with one or many players in that team.
 <br>
 <br>
+
 ## CI Pipeline
 
-![CI-Pipe-line](https://imgur.com/f5l0gVq.jpeg)
+
+![CI-Pipe-line](https://imgur.com/f5l0gVq.jpeg)<br>
+
+The above image shows how I implemented the continuous integration pipeline. This pipeline allows for software tools to handle the automated building, testing, and deployment proceses. 
+
+### How the CI pipeline works
+I create code on my local machine which is pushed up to a repository on GitHub, which, via a webhook, will trigger jenkins to start the build on the cloud server. At this point, tests will automatically run and test coverage reposts will be produced. This process is repeated  until there are no more errors. Once, all tests have been passed the app is made live through the cloud VM and ready to be used by the user.   
 
 development environtment (running on CI surver) from jenkins to google cloud
 
 # Project Tracking
-
-[here](https://trello.com/b/MLnU7psY/agile-board)
+Trello, along with agile methodologies, was used to track the progression of the project and show my workflow, from start to finish. The link to the full trello board can be found [here](https://trello.com/b/MLnU7psY/agile-board).
 
 ![Trello-board](https://imgur.com/dAeNJvg.jpeg)
 <br>
 
 # Risk Assessment
+The risk assessment conducted is split into two sections. The before is showing the risks that were known at the start of project, and the after shows the potentials risks when the project came to its end. 
 
 ### Before
 ![Risk-assessment-1](https://imgur.com/JvamcBA.jpeg)
@@ -78,6 +85,7 @@ development environtment (running on CI surver) from jenkins to google cloud
 ![Risk-assessment-2](https://imgur.com/m0azlxz.jpeg)
 
 # Testing
+
 
 ![pytest-jenkins](https://imgur.com/wJRxyIG.jpeg)
 
