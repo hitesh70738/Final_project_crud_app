@@ -1,10 +1,10 @@
 from flask import Flask, redirect, render_template, request
 from flask_sqlalchemy import SQLAlchemy 
-#from os import getenv
+from os import getenv
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://root:1234@34.105.208.208/crud_app"
-app.config["SECRET_KEY"] = "asdasda"
+app.config["SQLALCHEMY_DATABASE_URI"] = getenv("DATABASE_URI") 
+app.config["SECRET_KEY"] = getenv("SECRET_KEY")
 db = SQLAlchemy(app)
 
 from application import routes 
