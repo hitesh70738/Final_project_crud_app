@@ -62,6 +62,8 @@ development environtment (running on CI surver) from jenkins to google cloud
 
 # Project Tracking
 
+[here](https://trello.com/b/MLnU7psY/agile-board)
+
 ![Trello-board](https://imgur.com/dAeNJvg.jpeg)
 <br>
 
@@ -76,8 +78,6 @@ development environtment (running on CI surver) from jenkins to google cloud
 ![Risk-assessment-2](https://imgur.com/m0azlxz.jpeg)
 
 # Testing
-
-![Testing-integraton](https://imgur.com/GdWcRmr.jpeg)
 
 ![pytest-jenkins](https://imgur.com/wJRxyIG.jpeg)
 
@@ -94,6 +94,21 @@ To create a Team:
 View Homepage:
 
 ![Homepage](https://imgur.com/ci20SVR.jpeg)
+
+Add players:
+
+![Add-players](https://imgur.com/47R5Xtp.jpeg)
+
+Return back to home page:
+
+![Homepage](https://imgur.com/ci20SVR.jpeg)
+
+Deleting the team:
+
+![Home-Page](https://imgur.com/W4XYwbG.jpeg)
+
+# Further Improvements
+
 
 
 
