@@ -36,6 +36,7 @@ class TestBase(LiveServerTestCase):
         response = urlopen("http://localhost:5000")
         self.assertEqual(response.code, 200)
 
+
 class TestCreateTeam(TestBase):
 
     def create_team(self):
@@ -50,6 +51,7 @@ class TestCreateTeam(TestBase):
         assert url_for('home') in self.driver.current_url
         assert Teams.query.filter_by(id=1).first().team_name == 'Arsenal'
         assert Teams.query.filter_by(id=1).first().sponsor == 'Emirates'
+
 
 class TestAddPlayer(TestCreateTeam):
     def add_player(self):
@@ -68,6 +70,90 @@ class TestAddPlayer(TestCreateTeam):
         assert Players.query.filter_by(id=1).first().position == 'CDM'
         assert Players.query.filter_by(id=1).first().position == 'Arsenal FC'
         assert Players.query.filter_by(id=1).first().position == '1.8'
+
+class TestAddPlayer1(TestCreateTeam):
+    def add_player(self):
+        self.driver.find_element_by_xpath('/html/body/form[3]/input').click()
+        time.sleep(1)
+
+        self.driver.find_element_by_xpath('//*[@id="name"]').send_keys('Thomas')
+        self.driver.find_element_by_xpath('//*[@id="position"]').send_keys('CM')
+        self.driver.find_element_by_xpath('//*[@id="club"]').send_keys('Watford FC')
+        self.driver.find_element_by_xpath('//*[@id="height"]').send_keys('1.2')
+        self.driver.find_element_by_xpath('//*[@id="submit"]').click()
+        time.sleep(1)
+
+        assert url_for('add') in self.driver.current_url
+        assert Players.query.filter_by(id=1).first().name == 'Thomas'
+        assert Players.query.filter_by(id=1).first().position == 'CM'
+        assert Players.query.filter_by(id=1).first().position == 'Watford FC'
+        assert Players.query.filter_by(id=1).first().position == '1.2'
+
+class TestAddPlayer2(TestCreateTeam):
+    def add_player(self):
+        self.driver.find_element_by_xpath('/html/body/form[3]/input').click()
+        time.sleep(1)
+
+        self.driver.find_element_by_xpath('//*[@id="name"]').send_keys('Partey')
+        self.driver.find_element_by_xpath('//*[@id="position"]').send_keys('CB')
+        self.driver.find_element_by_xpath('//*[@id="club"]').send_keys('')
+        self.driver.find_element_by_xpath('//*[@id="height"]').send_keys('')
+        self.driver.find_element_by_xpath('//*[@id="submit"]').click()
+        time.sleep(1)
+
+        assert url_for('add') in self.driver.current_url
+        assert Players.query.filter_by(id=1).first().name == 'Partey'
+        assert Players.query.filter_by(id=1).first().position == 'CB'
+        assert Players.query.filter_by(id=1).first().position == ''
+        assert Players.query.filter_by(id=1).first().position == ''
+
+class TestAddPlayer3(TestCreateTeam):
+    def add_player(self):
+        self.driver.find_element_by_xpath('/html/body/form[3]/input').click()
+        time.sleep(1)
+
+        self.driver.find_element_by_xpath('//*[@id="name"]').send_keys('Bale')
+        self.driver.find_element_by_xpath('//*[@id="position"]').send_keys('LW')
+        self.driver.find_element_by_xpath('//*[@id="club"]').send_keys('')
+        self.driver.find_element_by_xpath('//*[@id="height"]').send_keys('')
+        self.driver.find_element_by_xpath('//*[@id="submit"]').click()
+        time.sleep(1)
+
+        assert url_for('add') in self.driver.current_url
+        assert Players.query.filter_by(id=1).first().name == 'Bale'
+        assert Players.query.filter_by(id=1).first().position == 'LW'
+        assert Players.query.filter_by(id=1).first().position == ''
+        assert Players.query.filter_by(id=1).first().position == ''
+
+class TestAddPlayer4(TestCreateTeam):
+    def add_player(self):
+        self.driver.find_element_by_xpath('/html/body/form[3]/input').click()
+        time.sleep(1)
+
+        self.driver.find_element_by_xpath('//*[@id="name"]').send_keys('Messi')
+        self.driver.find_element_by_xpath('//*[@id="position"]').send_keys('RW')
+        self.driver.find_element_by_xpath('//*[@id="club"]').send_keys('Barca')
+        self.driver.find_element_by_xpath('//*[@id="height"]').send_keys('')
+        self.driver.find_element_by_xpath('//*[@id="submit"]').click()
+        time.sleep(1)
+
+        assert url_for('add') in self.driver.current_url
+        assert Players.query.filter_by(id=1).first().name == 'Messi'
+        assert Players.query.filter_by(id=1).first().position == 'RW'
+        assert Players.query.filter_by(id=1).first().position == 'Barca'
+        assert Players.query.filter_by(id=1).first().position == ''
+
+class TestUpdateTeam(TestCreateTeam):
+
+    def create_team(self):
+        self.driver.find_element_by_xpath("/html/body/a[1]").click()
+        time.sleep(1)
+
+        self.driver.find_element_by_xpath('//*[@id="team_name"]').send_keys('New team')
+        self.driver.find_element_by_xpath('//*[@id="sponsor"]').send_keys('New sponsor')
+        self.driver.find_element_by_xpath('//*[@id="submit"]').click()
+        
+        assert url_for('home') in self.driver.current_url
 
 class TestDeleteTeam(TestCreateTeam):
 

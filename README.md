@@ -67,11 +67,18 @@ development environtment (running on CI surver) from jenkins to google cloud
 
 # Risk Assessment
 
+### Before
 ![Risk-assessment-1](https://imgur.com/JvamcBA.jpeg)
+<br>
+
+### After
 
 ![Risk-assessment-2](https://imgur.com/m0azlxz.jpeg)
 
 # Testing
+
+![Testing-integraton](https://imgur.com/GdWcRmr.jpeg)
+
 
 
 
