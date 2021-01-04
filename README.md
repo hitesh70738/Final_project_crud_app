@@ -55,9 +55,9 @@ The 2nd ER diagram shows the final draft of my ER diagram. I removed the user lo
 
 
 
-![Risk-assessment-2](https://imgur.com/fisOPXL.jpeg)
+![Risk-assessment-2](https://imgur.com/m0azlxz.jpeg)
 
-
+https://imgur.com/m0azlxz
 
 
 
