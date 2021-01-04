@@ -79,6 +79,10 @@ development environtment (running on CI surver) from jenkins to google cloud
 
 ![Testing-integraton](https://imgur.com/GdWcRmr.jpeg)
 
+![pytest-jenkins](https://imgur.com/wJRxyIG.jpeg)
+
+# Front End Design 
+
 
 
 
