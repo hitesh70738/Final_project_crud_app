@@ -9,7 +9,7 @@
 * [Risk Assessment](#risk-assessment)
 * [Testing](#testing)
 * [Front-End Design](#front-end-design)
-* [Future Improvements](#future-improvements)
+* [Further Improvements](#further-improvements)
 * [Authors](#authors)
 
 # Project Brief 
