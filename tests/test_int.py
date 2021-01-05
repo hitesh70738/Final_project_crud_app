@@ -3,6 +3,7 @@ import time
 from flask import url_for
 from urllib.request import urlopen
 
+from os import getenv
 from flask_testing import LiveServerTestCase
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -12,8 +13,8 @@ from application.models import Teams, Players
 class TestBase(LiveServerTestCase):
 
     def create_app(self):
-        app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:1234@34.105.208.208/crud_app"
-        app.config['SECRET_KEY'] = "asd"
+        app.config['SQLALCHEMY_DATABASE_URI'] = getenv("DATABASE_URI") 
+        app.config['SECRET_KEY'] = getenv("SECRET_KEY")
         return app
 
     def setUp(self):
