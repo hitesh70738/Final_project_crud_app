@@ -132,7 +132,7 @@ Overall, the application hit all the MVP requirements. However, there are a few 
 * Add images of the players that are being added to the team.  
 * Try an implemeent a delete function for removing players. 
 * Make the application so that it prevents the user from selecting 2 players from the same club. 
-* Have a extra column on the risk assessment to show that the checks have been revisted and given the green-light.
+* Have a extra column on the risk assessment to show that the checks have been revisted and know further issues arise.
 
 # Authors 
 Hitesh Patel
